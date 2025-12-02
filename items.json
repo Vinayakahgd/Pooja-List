@@ -1,0 +1,746 @@
+[
+  {
+    "name": "ಅರಿಶಿನ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕುಂಕುಮ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಅರಿಶಿನ ಕೋಂಬು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಗಂಧದ ಕಡ್ಡಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ವಿಭೂತಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಸಿಂಧೂರ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಅಷ್ಟಗಂಧ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಅಗರಭತ್ತಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕರ್ಪೂರ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ದಶಾಂಗ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಸಾಂಬ್ರಾಣಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬೆಂಕಿ ಪೊಟ್ಟಣ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತುಪ್ಪ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬತ್ತಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಹೂಬತ್ತಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಗೆಜ್ಜೆವಸ್ತ್ರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಮೂರು ಎಳೆ ಹಸಿದಾರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಣ್ಣದ ದಾರಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಚೂರಡಿಕೆ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬಟ್ಲಡಿಕೆ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಒಣದ್ರಾಕ್ಷಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಗೋಡಂಬಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬಾದಾಮಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಖರ್ಜೂರ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕಲ್ಲುಸಕ್ಕರೆ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಜೇನುತುಪ್ಪ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ನವಧಾನ್ಯ ಸೆಟ್",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ದೊನ್ನೆಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಏಲಕ್ಕಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಲವಂಗ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕೇಸರಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಪಚ್ಚಕರ್ಪೂರ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬತ್ತದ ಅರಳು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಭತ್ತ",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಕರಿ ಎಳ್ಳು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಅಕ್ಕಿ ಹಿಟ್ಟು",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಅವಲಕ್ಕಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬೆಲ್ಲ",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಕೊಬ್ಬರಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಿಳಿಸಾಸಿವೆ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಲಾವಂಚ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕಚೋರ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಜಟಮಾಸಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಜಾಪತ್ರೆ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಎಡ ಮತ್ತು ಬಲಮುರಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಹಿಪ್ಪಲಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬುಜಪತ್ತೆ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬಿಳಿಮೆಣಸು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬಾಲ ಮೆಣಸು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಒಣ ಶುಂಟಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕಸ್ತೂರಿ ಅರಿಶಿನಕೊಂಬು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಜೇಷ್ಠ ಮಧು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಬಜೆ ಬೇರು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ತುಂಗೆ ಗಡ್ಡೆ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ತಾವರೆ ಬೀಜ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕಲ್ಲು ಹೂ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ದೇವದಾರು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಈಶ್ವರಿ ಬೇರು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಅಶ್ವಗಂಧ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ನಾಗಕೇಸರಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಅರಳೆ ಕಾಯಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಮೋಡಿ ಕಟ್ಟಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಮಂಜಿಷ್ಠ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ವಾಯು ವಿರಂಗ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಹಾಲು ಮಡ್ಡಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಗುಗ್ಗುಲ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಹೋಮದ ದ್ರವ್ಯ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕಸ್ತೂರಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಗೋರೋಜನ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಪನ್ನೀರು",
+    "quantityType": "Liter"
+  },
+  {
+    "name": "ಗಂಗಾಜಲ",
+    "quantityType": "Liter"
+  },
+  {
+    "name": "ಅತ್ತರ್",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಪುನುಗು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಜವಾದು",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಅಷ್ಟಬಂಧನ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತಾಮ್ರದ ಚೊಂಬು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಿಂದಿಗೆಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಚಾರು ಪಾತ್ರೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಮುಚ್ಚಳ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಚಮಚ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಅಜ್ಯ ಪಾತ್ರೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಪಂಚಪಾತ್ರೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಉದ್ದರಣೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಅರ್ಘ್ಯ ಪಾತ್ರೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತಾಮ್ರದ ತಟ್ಟೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕಲಾಯಿ ಬಟ್ಟಲು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತಾಮ್ರದ ಕಾಸು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತಾಮ್ರದ ಮೊಳೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ವಾಸ್ತು ಪ್ರತಿಮೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ನವರತ್ನ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಪಂಚಲೋಹ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಹಸು ಕರು ವಿಗ್ರಹ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕುದುರೆ ಲಾಲ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಗಣೇಶನ ವಿಗ್ರಹ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಲಕ್ಷ್ಮಿ ವಿಗ್ರಹ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಲಕ್ಷ್ಮೀನಾರಾಯಣ ವಿಗ್ರಹ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಸುದರ್ಶನ ಯಂತ್ರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಶ್ರೀಚಕ್ರ ಯಂತ್ರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ನವಗ್ರಹ ಯಂತ್ರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ವಾಸ್ತು ಯಂತ್ರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕಬ್ಬಣದ ಬಾಂಡ್ಲಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತ್ರಿಶೂಲ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಹೋಮ ಕುಂಡ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ನವಗ್ರಹ ಸಮಿತ್ತು",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಅರಳಿ ಕಡ್ಡಿ (ಅಶ್ವತ್ಥ)",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಪಾಲಾಶ (ಮುತ್ತುತ)",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಎಕ್ಕ (ಅರ್ಕ)",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಖದಿರಿ (ಕಗ್ಗಲಿ)",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಉತ್ತರಣೆ",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಅತ್ತಿ (ಔದುಂಬರ)",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಅಮೃತಬಳ್ಳಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಗೋಳಿ (ಆಲ, ವಟ)",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ದರ್ಭೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಸೌದೆ ಚಕ್ಕೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ನೈಲಾನ್ ರಂಗೋಲಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕಲರ್ ರಂಗೋಲಿ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಪಂಚೆಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬೈರಾಸು (ಮಡಿಪಂಚೆ)",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತೆರೆ ಶಲ್ಯ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಶಲ್ಯಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಟವೆಲ್‌ಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ರವಿಕೆ ಕಣ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಮೊಗಟ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ರೇಷ್ಮೆ ವಸ್ತ್ರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ನವಗ್ರಹ ವಸ್ತುಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕಂಬಳಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ದವಾಲಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ದರ್ಭೆ ಚಾಪೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕಡ್ಡಿ ಚಾಪೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಜಮಖಾನ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಛತ್ರಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ವಾಕಿಂಗ್ ಸ್ಟಿಕ್",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಜನಿವಾರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಗೋಪಿಚಂದನ",
+    "quantityType": "Gram"
+  },
+  {
+    "name": "ಕಪ್ಪುಟೋಪಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬೆಳ್ಳಿಜನಿವಾರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಚಿನ್ನಜನಿವಾರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ದರ್ಭೆಧಾರ (ಚಂದರಿಕೆ)",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಾಸಿಂಗ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಪೇಲ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕಂಬಳಿದಾರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಾಗಿನದ ಸಾಮಗ್ರಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕನ್ನಡಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ರುದ್ರಾಕ್ಷಿ ಸರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತುಳಸಿ ಮಣಿಸರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕಮಲಾಕ್ಷಿ ಸರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಸತ್ಯನಾರಾಯಣ ಫೋಟೋ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಹಲಗರಾತಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಧೂಪಾರ್ತಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಗಂಟೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಸುಸ್ತುವ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಶಿವದಾರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ವಿಭೂತಿ ಗಟ್ಟಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಗಂಧದಕಲ್ಲಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಹೂವುಗಳು",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಹಾರಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಿಲ್ಪತ್ರೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ದವನ, ಮರಗ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಹಣ್ಣುಗಳು (ಪಂಚಫಲ)",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಬಿಡಿ ಹೂವುಗಳು",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಜೀವಸ್",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ವೀಳ್ಯದೆಲೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಾಳೆಕಂಬ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಾಳೆಎಲೆಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಮಾವಿನ ಎಲೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಬಾಳೆಹಣ್ಣು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ನಿಂಬೆಹಣ್ಣು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕುಂಬಳಕಾಯಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ತೆಂಗಿನಕಾಯಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಅಕ್ಕಿ",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಸಕ್ಕರೆ",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಹಾಲು",
+    "quantityType": "Liter"
+  },
+  {
+    "name": "ಮೊಸರು",
+    "quantityType": "Liter"
+  },
+  {
+    "name": "ಗೋಮಯ",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಗೋಮೂತ್ರ",
+    "quantityType": "Liter"
+  },
+  {
+    "name": "ಮೋದಕ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಹೋಮದ ಕುಂಡ ಕಬ್ಬಿಣದ್ದು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಕುಂಬಳಕಾಯಿ ಕಟ್ಟುವ ದಾರ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಇಟ್ಟಿಗೆ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಮರಳು",
+    "quantityType": "Kg"
+  },
+  {
+    "name": "ಕತ್ತಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಚಿಲ್ಲರೆ ನಾಣ್ಯ",
+    "quantityType": "Rs"
+  },
+  {
+    "name": "ತಟ್ಟೆಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ದೀಪದ ಕಂಬಗಳು",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ದೀಪದ ಬತ್ತಿ",
+    "quantityType": "Nos"
+  },
+  {
+    "name": "ಸ್ಟೀಲ್ ಬಿಂದಿಗೆಗಳು",
+    "quantityType": "Nos"
+  }
+]

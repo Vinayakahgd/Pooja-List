@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja List Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div id="homeScreen" class="screen">
+        <div class="container">
+            <header>
+                <h1>🙏 Pooja List Creator</h1>
+                <p>Create and manage your pooja lists</p>
+            </header>
+
+            <div class="home-actions">
+                <button id="createNewListBtn" class="btn btn-primary btn-large">+ Create New List</button>
+            </div>
+
+            <div class="saved-lists-section">
+                <h2>Saved Lists</h2>
+                <div id="savedListsContainer" class="saved-lists">
+                    <!-- Saved lists will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- List Editor Screen -->
+    <div id="editorScreen" class="screen" style="display: none;">
+        <div class="container">
+            <div class="editor-header">
+                <button id="backBtn" class="btn btn-secondary">← Back</button>
+                <div class="list-title-section">
+                    <input type="text" id="listTitleInput" class="list-title-input" placeholder="List Name" />
+                    <button id="editTitleBtn" class="btn-icon">✏️</button>
+                </div>
+            </div>
+
+            <!-- Header Section -->
+            <div class="list-header-section">
+                <div class="header-display" id="headerDisplay">
+                    <div class="header-image-container">
+                        <img id="headerImage" src="" alt="Header Logo" style="display: none;" />
+                        <button id="uploadImageBtn" class="btn btn-secondary btn-small">📷 Add Logo</button>
+                        <input type="file" id="imageInput" accept="image/*" style="display: none;" />
+                    </div>
+                    <div class="header-text" id="headerText">
+                        <p>ಶ್ರೀ ಮಹಾಗಣಪತಿ ಪ್ರಸನ್ನ ॥ ॥ ಶ್ರೀ ಲಕ್ಷ್ಮೀನಾರಾಯಣ ಪ್ರಸನ್ನ</p>
+                        <h3>ಶ್ರೀ ಮಹಾಗಣಪತಿ ದೇವಸ್ಥಾನ</h3>
+                        <p>ಪೀಣ್ಯ 1ನೇ ಹಂತ, ಬೆಂಗಳೂರು-58.</p>
+                        <h4>ಶ್ರೀ ಸತ್ಯನಾರಾಯಣಸ್ವಾಮಿ ಪೂಜೆಗೆ ಬೇಕಾಗುವ ಸಾಮಗ್ರಿಗಳು</h4>
+                    </div>
+                </div>
+                <button id="editHeaderBtn" class="btn btn-secondary btn-small">✏️ Edit Header</button>
+            </div>
+
+            <div class="table-container">
+                <table id="itemsTable">
+                    <thead>
+                        <tr>
+                            <th class="col-check">☑</th>
+                            <th class="col-item">Item Name</th>
+                            <th class="col-qty">Quantity</th>
+                            <th class="col-remark">Remark</th>
+                            <th class="col-action"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemsTableBody">
+                        <!-- Items will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="editor-footer">
+                <button id="addNewItemBtn" class="btn btn-primary">+ Add New Item</button>
+                <div class="footer-right">
+                    <button id="saveListBtn" class="btn btn-success">💾 Save</button>
+                    <button id="shareListBtn" class="btn btn-success">📤 Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Item Modal -->
+    <div id="addItemModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Add New Item</h3>
+            <div class="modal-form">
+                <input type="text" id="modalItemName" placeholder="Item name" />
+                <select id="modalItemQtyType">
+                    <option value="Nos">Nos</option>
+                    <option value="Gram">Gram</option>
+                    <option value="Kg">Kg</option>
+                    <option value="Liter">Liter</option>
+                    <option value="Maru">Maru</option>
+                    <option value="Types">Types</option>
+                    <option value="Rs">Rs</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="modal-actions">
+                    <button id="modalAddBtn" class="btn btn-primary">Add</button>
+                    <button id="modalCancelBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>List Saved Successfully!</h3>
+            <p>Would you like to share this list?</p>
+            <div class="modal-actions">
+                <button id="shareYesBtn" class="btn btn-success">📤 Share on WhatsApp</button>
+                <button id="shareNoBtn" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Header Modal -->
+    <div id="editHeaderModal" class="modal" style="display: none;">
+        <div class="modal-content modal-large">
+            <h3>Edit Header</h3>
+            <div class="modal-form">
+                <label>Line 1 (Prayer/Blessing):</label>
+                <input type="text" id="headerLine1" placeholder="ಶ್ರೀ ಮಹಾಗಣಪತಿ ಪ್ರಸನ್ನ..." />
+                
+                <label>Line 2 (Temple/Organization Name):</label>
+                <input type="text" id="headerLine2" placeholder="ಶ್ರೀ ವೀರಶಕ್ತಿ ಮಹಾಗಣಪತಿ ದೇವಸ್ಥಾನ" />
+                
+                <label>Line 3 (Address):</label>
+                <input type="text" id="headerLine3" placeholder="ಪೀಣ್ಯ 1ನೇ ಹಂತ, ಬೆಂಗಳೂರು-58." />
+                
+                <label>Phone Number:</label>
+                <input type="tel" id="headerPhone" placeholder="📞 +91 98765 43210" />
+                
+                <label>Line 4 (Purpose/Title):</label>
+                <input type="text" id="headerLine4" placeholder="ಶ್ರೀ ಸತ್ಯನಾರಾಯಣಸ್ವಾಮಿ ಪೂಜೆಗೆ ಬೇಕಾಗುವ ಸಾಮಗ್ರಿಗಳು" />
+                
+                <div class="modal-actions">
+                    <button id="saveHeaderBtn" class="btn btn-primary">Save Header</button>
+                    <button id="cancelHeaderBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
