@@ -360,26 +360,20 @@ function saveList() {
     // Save to localStorage
     localStorage.setItem('poojaLists', JSON.stringify(savedLists));
 
-    // Show share modal
-    document.getElementById('shareModal').style.display = 'flex';
+    alert('✅ List saved successfully!');
 }
 
-// Export to PDF and prepare for WhatsApp sharing
-function exportToPDF() {
-    shareToWhatsApp();
-}
-
-// Share to WhatsApp - creates PDF and opens WhatsApp
-async function shareToWhatsApp() {
+// Export to PDF and download to storage
+async function exportToPDF() {
     if (!currentList) return;
 
     const selectedItems = currentList.items.filter(item => item.checked);
     
     if (selectedItems.length === 0) {
-        alert('Please select at least one item to share!');
+        alert('Please select at least one item to export!');
         return;
     }
-    
+
     // Show loading message
     const originalText = 'Generating PDF...';
     
@@ -433,9 +427,6 @@ async function shareToWhatsApp() {
                         `).join('')}
                     </tbody>
                 </table>
-                <div style="text-align: center; margin-top: 30px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; color: white; font-size: 14px; font-weight: bold; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);">
-                    Total Items: ${selectedItems.length}
-                </div>
             </div>
         `;
         
@@ -463,21 +454,137 @@ async function shareToWhatsApp() {
         const filename = `${currentList.title.replace(/[^a-z0-9]/gi, '_')}_${new Date().toISOString().split('T')[0]}.pdf`;
         pdf.save(filename);
         
-        // Wait a moment for download to start, then open WhatsApp
-        setTimeout(() => {
-            // Create a short message for WhatsApp
-            const message = `🙏 ${currentList.title || 'Pooja List'}\n\n${selectedItems.length} items - PDF attached above`;
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Open WhatsApp Web
-            window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
-            
-            alert('PDF downloaded! Now:\n1. The PDF file has been saved to your Downloads folder\n2. WhatsApp will open\n3. Click the attachment button (📎) in WhatsApp\n4. Select "Document" and choose the downloaded PDF\n5. Send to your contact!');
-        }, 1000);
+        alert('✅ PDF downloaded to your Downloads folder!');
         
     } catch (error) {
         console.error('Error generating PDF:', error);
         alert('Error generating PDF. Please try again.');
+    }
+}
+
+// Share to WhatsApp - sends text list only
+async function shareToWhatsApp() {
+    if (!currentList) return;
+
+    const selectedItems = currentList.items.filter(item => item.checked);
+    
+    if (selectedItems.length === 0) {
+        alert('Please select at least one item to share!');
+        return;
+    }
+
+    // Show loading message
+    const originalText = 'Generating PDF...';    try {
+        // Create a hidden div with the content
+        const contentDiv = document.createElement('div');
+        contentDiv.style.cssText = 'position: absolute; left: -9999px; width: 800px; background: white; padding: 40px;';
+        
+        // Build header HTML if header exists
+        let headerHTML = '';
+        if (currentList.header && (currentList.header.line1 || currentList.header.line2 || currentList.header.line3 || currentList.header.line4 || currentList.header.image)) {
+            headerHTML = `
+                <div style="background: white; padding: 25px; border-radius: 12px; margin-bottom: 25px; display: flex; gap: 20px; align-items: center; border: 3px solid #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                    ${currentList.header.image ? `
+                        <div style="flex-shrink: 0; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                            <img src="${currentList.header.image}" style="max-width: 100px; max-height: 100px; width: 100%; height: 100%; object-fit: contain; border-radius: 8px; background: white; padding: 5px;" />
+                        </div>
+                    ` : ''}
+                    <div style="flex: 1; text-align: center;">
+                        ${currentList.header.line1 ? `<p style="margin: 5px 0; color: #667eea; font-size: 15px; font-weight: 600;">${currentList.header.line1}</p>` : ''}
+                        ${currentList.header.line2 ? `<h3 style="margin: 10px 0; color: #764ba2; font-size: 20px; font-weight: bold;">${currentList.header.line2}</h3>` : ''}
+                        ${currentList.header.line3 ? `<h4 style="margin: 5px 0; color: #555; font-size: 14px;">${currentList.header.line3}</h4>` : ''}
+                        ${currentList.header.phone ? `<div style="margin: 10px 0; padding: 10px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 16px; font-weight: bold; border-radius: 8px; display: inline-block; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);">📞 ${currentList.header.phone}</div>` : ''}
+                        ${currentList.header.line4 ? `<h4 style="margin: 8px 0; color: #667eea; font-size: 15px; font-weight: bold;">${currentList.header.line4}</h4>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+        
+        contentDiv.innerHTML = `
+            <div style="font-family: Arial, sans-serif;">
+                ${headerHTML}
+                <table style="width: 100%; border-collapse: collapse; margin-top: 20px; border: 2px solid #667eea; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <th style="padding: 14px; text-align: left; border-bottom: 2px solid #667eea; width: 50px; color: white; font-weight: bold;">No.</th>
+                            <th style="padding: 14px; text-align: left; border-bottom: 2px solid #667eea; color: white; font-weight: bold;">Item Name</th>
+                            <th style="padding: 14px; text-align: left; border-bottom: 2px solid #667eea; width: 150px; color: white; font-weight: bold;">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background: white;">
+                        ${selectedItems.map((item, index) => `
+                            <tr style="border-bottom: 1px solid #e0e7ff;">
+                                <td style="padding: 12px; text-align: center; color: #667eea; font-weight: bold;">${index + 1}</td>
+                                <td style="padding: 12px;">
+                                    <div style="font-weight: bold; color: #333;">${item.name}</div>
+                                    ${item.remark ? `<div style="font-size: 12px; color: #666; font-style: italic; margin-top: 5px;">Note: ${item.remark}</div>` : ''}
+                                </td>
+                                <td style="padding: 12px; font-weight: bold; color: #764ba2;">${item.quantity} ${item.quantityType}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        `;
+        
+        document.body.appendChild(contentDiv);
+        
+        // Generate PDF using html2canvas and jsPDF
+        const canvas = await html2canvas(contentDiv, {
+            scale: 2,
+            useCORS: true,
+            logging: false
+        });
+        
+        document.body.removeChild(contentDiv);
+        
+        const imgData = canvas.toDataURL('image/png');
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        
+        const imgWidth = 210; // A4 width in mm
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        
+        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        
+        // Convert PDF to blob for sharing
+        const pdfBlob = pdf.output('blob');
+        const filename = `${currentList.title.replace(/[^a-z0-9]/gi, '_')}_${new Date().toISOString().split('T')[0]}.pdf`;
+        
+        // Try to use Web Share API (works on mobile)
+        if (navigator.share && navigator.canShare) {
+            try {
+                const file = new File([pdfBlob], filename, { type: 'application/pdf' });
+                const shareData = {
+                    title: currentList.title || 'Pooja List',
+                    text: `🙏 ${currentList.title || 'Pooja List'} - ${selectedItems.length} items`,
+                    files: [file]
+                };
+                
+                if (navigator.canShare(shareData)) {
+                    await navigator.share(shareData);
+                    return;
+                }
+            } catch (err) {
+                console.log('Web Share API failed, falling back to download + WhatsApp');
+            }
+        }
+        
+        // Fallback: Download PDF and open WhatsApp
+        pdf.save(filename);
+        
+        // Wait a moment for download, then open WhatsApp
+        setTimeout(() => {
+            const message = `🙏 ${currentList.title || 'Pooja List'}\n\n📄 PDF file downloaded - ${selectedItems.length} items\n\nPlease attach the downloaded PDF file`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
+            
+            alert('📥 PDF downloaded to your Downloads folder!\n\n📲 WhatsApp will open - please attach the PDF file using the 📎 button');
+        }, 500);
+        
+    } catch (error) {
+        console.error('Error sharing to WhatsApp:', error);
+        alert('Error sharing to WhatsApp. Please try again.');
     }
 }
 
@@ -591,6 +698,8 @@ function attachEventListeners() {
     
     document.getElementById('saveListBtn').addEventListener('click', saveList);
     
+    document.getElementById('exportPdfBtn').addEventListener('click', exportToPDF);
+    
     document.getElementById('shareListBtn').addEventListener('click', shareToWhatsApp);
 
     // Add item modal
@@ -604,18 +713,6 @@ function attachEventListeners() {
         if (e.key === 'Enter') {
             confirmAddItem();
         }
-    });
-
-    // Share modal
-    document.getElementById('shareYesBtn').addEventListener('click', () => {
-        closeModal('shareModal');
-        shareToWhatsApp();
-        showHomeScreen();
-    });
-
-    document.getElementById('shareNoBtn').addEventListener('click', () => {
-        closeModal('shareModal');
-        showHomeScreen();
     });
 
     // Header editing
