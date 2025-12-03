@@ -552,39 +552,35 @@ async function shareToWhatsApp() {
         const filename = `${currentList.title.replace(/[^a-z0-9]/gi, '_')}_${new Date().toISOString().split('T')[0]}.pdf`;
         
         // Try to use Web Share API (works on mobile)
-        if (navigator.share && navigator.canShare) {
+        if (navigator.share) {
             try {
                 const file = new File([pdfBlob], filename, { type: 'application/pdf' });
                 const shareData = {
-                    title: currentList.title || 'Pooja List',
-                    text: `🙏 ${currentList.title || 'Pooja List'} - ${selectedItems.length} items`,
                     files: [file]
                 };
                 
-                if (navigator.canShare(shareData)) {
+                // Check if we can share files
+                if (navigator.canShare && navigator.canShare(shareData)) {
                     await navigator.share(shareData);
                     return;
                 }
             } catch (err) {
-                console.log('Web Share API failed, falling back to download + WhatsApp');
+                if (err.name !== 'AbortError') {
+                    console.log('Web Share API failed, falling back to download method');
+                } else {
+                    return; // User cancelled the share
+                }
             }
         }
         
-        // Fallback: Download PDF and open WhatsApp
+        // Fallback: Download PDF and provide instructions
         pdf.save(filename);
         
-        // Wait a moment for download, then open WhatsApp
-        setTimeout(() => {
-            const message = `🙏 ${currentList.title || 'Pooja List'}\n\n📄 PDF file downloaded - ${selectedItems.length} items\n\nPlease attach the downloaded PDF file`;
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
-            
-            alert('📥 PDF downloaded to your Downloads folder!\n\n📲 WhatsApp will open - please attach the PDF file using the 📎 button');
-        }, 500);
+        alert('📥 PDF has been downloaded!\n\n📲 To share on WhatsApp:\n1. Open WhatsApp\n2. Select a chat\n3. Click the 📎 attachment button\n4. Choose "Document"\n5. Select the downloaded PDF file\n6. Send!');
         
     } catch (error) {
         console.error('Error sharing to WhatsApp:', error);
-        alert('Error sharing to WhatsApp. Please try again.');
+        alert('Error generating PDF. Please try again.');
     }
 }
 
